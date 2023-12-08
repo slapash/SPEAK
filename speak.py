@@ -5,7 +5,8 @@ import os
 def text_to_speech(text, language='en'):
     tts = gTTS(text=text, lang=language)
     tts.save("output.mp3")
-    os.system("mpg123 output.mp3")
+    os.system("mpg123 output.mp3") #macos
+    #os.system("start output.mp3") for windows
 
 sg.theme('DarkBlue')
 
